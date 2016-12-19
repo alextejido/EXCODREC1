@@ -9,49 +9,49 @@ import javax.swing.JOptionPane;
 
 public class LoVivido {
 
+ public static  int ano, mes, dia, hora;
+    
 public static void main(String[] args) {
 
 
 
-int m;
-int d;
-int h;
-int a;
 String n = nombre();
  String e = edad();
+ 
 
-a = Integer.parseInt (e);
+
+ano = Integer.parseInt (e);
+
+mes = (ano*12);
+dia = (ano*365);
+hora = (dia*24);
  
-m = (a*12);
-d = (a*365);
-h = (d*24);
- 
-        Visualizar(m, n, d, h);
+        Visualizar(mes, nome, dia, hora);
 
    System.exit (0);
 
 }
 
     public static String edad() throws HeadlessException {
-        String e;
-        e = JOptionPane.showInputDialog ("Escriba su edad: ");
-        return e;
+        String edad;
+        edad = JOptionPane.showInputDialog ("Escriba su edad: ");
+        return edad;
     }
 
     public static String nombre() throws HeadlessException {
-        String n;
-        n = JOptionPane.showInputDialog ("Escriba su nombre: ");
-        return n;
+        String nome;
+        nome = JOptionPane.showInputDialog ("Escriba su nombre: ");
+        return nome;
     }
 
-    public static void Visualizar(int m, String n, int d, int h) throws HeadlessException {
-        JOptionPane.showMessageDialog(null,  "Meses: "  +m,"Numero de meses vividos de " +n,JOptionPane.INFORMATION_MESSAGE);
+    public static void Visualizar(int mes, String nome, int dia, int hora) throws HeadlessException {
+        JOptionPane.showMessageDialog(null,  "Meses: "  +mes,"Numero de meses vividos de " +nome,JOptionPane.INFORMATION_MESSAGE);
         
         
-        JOptionPane.showMessageDialog(null, "Días: " +d,"Numero de días vividos de "+n,JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Días: " +dia,"Numero de días vividos de "+nome,JOptionPane.INFORMATION_MESSAGE);
         
         
-        JOptionPane.showMessageDialog(null, "Horas: " +h,"Numero de horas vividos de "+n,JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Horas: " +hora,"Numero de horas vividos de "+nome,JOptionPane.INFORMATION_MESSAGE);
     }
    
 
